@@ -41,29 +41,7 @@ Repcl is a full-featured in-game command framework for Roblox. It handles comman
 
 ## Install
 
-Place `Repcl` (ModuleScript) under `ReplicatedStorage`. Place Iris under `ReplicatedStorage.deps.Iris`.
-
-```
-ReplicatedStorage
-├── Repcl        -- this library
-│   ├── Types
-│   ├── Hooks
-│   ├── Registry
-│   ├── TypeSystem
-│   ├── BuiltinTypes
-│   ├── AuthManager
-│   ├── Parser
-│   ├── Executor
-│   ├── Network
-│   ├── Interface
-│   ├── WindowManager
-│   ├── Repl
-│   ├── Builder
-│   ├── Builtins
-│   └── Repcl    -- entry (this is what you require)
-└── deps
-    └── Iris
-```
+Place `Repcl` (ModuleScript) under `ReplicatedStorage`.
 
 ---
 
