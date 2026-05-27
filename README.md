@@ -43,9 +43,11 @@ Repcl is a full-featured in-game command framework for Roblox. It handles comman
 
 Place `Repcl` (ModuleScript) under `ReplicatedStorage`. 
 
+---
+
 ## Getting Started 
 
-**Client** (`LocalScript` in `StarterPlayerScripts`):
+**Server** (`Script` in `ServerScriptService `):
 
 ```lua
 local Repcl = require(game.ReplicatedStorage.Repcl.Repcl)
