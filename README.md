@@ -10,6 +10,8 @@
 
 </div>
 
+---
+
 <br />
 
 Repcl is a full-featured in-game command framework for Roblox. It handles command registration, typed argument parsing, server/client execution contexts, auth hooks, middleware, a chain expression language, and a built-in script editor called **Repl**. The main CLI terminal is a fully custom Roblox ScreenGui. WWI windows and the Repl editor are powered by [Iris](https://github.com/SirMallard/Iris).
