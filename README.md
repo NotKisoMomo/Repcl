@@ -1,7 +1,5 @@
 <div align="center">
 
-# Repcl
-
 <img src="https://img.shields.io/badge/Repcl-v0.1.0-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
 <img src="https://img.shields.io/badge/Roblox_Execution_and_Processing_Command_Library-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
 <img src="https://img.shields.io/badge/Plinko_Labs-Built_by-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
@@ -9,8 +7,6 @@
 <img src="https://img.shields.io/badge/Iris-WWI_&_Repl-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
 
 </div>
-
----
 
 <br />
 
@@ -41,7 +37,29 @@ Repcl is a full-featured in-game command framework for Roblox. It handles comman
 
 ## Install
 
-Place `Repcl` (ModuleScript) under `ReplicatedStorage`.
+Place `Repcl` (ModuleScript) under `ReplicatedStorage`. Place Iris under `ReplicatedStorage.deps.Iris`.
+
+```
+ReplicatedStorage
+├── Repcl        -- this library
+│   ├── Types
+│   ├── Hooks
+│   ├── Registry
+│   ├── TypeSystem
+│   ├── BuiltinTypes
+│   ├── AuthManager
+│   ├── Parser
+│   ├── Executor
+│   ├── Network
+│   ├── Interface
+│   ├── WindowManager
+│   ├── Repl
+│   ├── Builder
+│   ├── Builtins
+│   └── Repcl    -- entry (this is what you require)
+└── deps
+    └── Iris
+```
 
 ---
 
@@ -59,7 +77,6 @@ Repcl.SetRoleHook(function(player)
 end)
 
 Repcl.Start({
-    Prefix      = "/",
     DefaultRole = "User",
     ReplEnabled = true,
 })
@@ -99,7 +116,7 @@ game:GetService("UserInputService").InputBegan:Connect(function(input, gpe)
 end)
 ```
 
-The CLI auto-focuses input on open. Type `/help` to see all registered commands.
+The CLI auto-focuses input on open. Type `help` to see all registered commands.
 
 ---
 
@@ -237,8 +254,8 @@ Types with `Multi = true` trigger a floating picker frame in the CLI instead of 
 Flags attached after args with `-short` or `-name`:
 
 ```
-/kick PlayerTwo "grief" -s
-/ban PlayerTwo 1d "grief" -s -p
+kick PlayerTwo "grief" -s
+ban PlayerTwo 1d "grief" -s -p
 ```
 
 Declared on the command:
@@ -363,7 +380,7 @@ Repcl.PostExecute(function(ctx, result)
 end)
 
 Repcl.OnErr(function(ctx, err)
-    Repcl.Err("/" .. ctx.Command .. " failed -- " .. err)
+    Repcl.Err(ctx.Command .. " failed -- " .. err)
 end)
 
 Repcl.OnConnect(function(player)
@@ -469,8 +486,8 @@ Repl (Remediate Execution Processing Layer) is the built-in script editor. It is
 Open it from the CLI:
 
 ```
-/repl
-/repl -s     -- open in server context
+repl
+repl -s     -- open in server context
 ```
 
 Or programmatically:
@@ -511,7 +528,6 @@ Repcl.HideCLI()
 Repcl.ToggleCLI()
 Repcl.LockCLI()
 Repcl.UnlockCLI()
-Repcl.SetPrefix("/")
 Repcl.SetTheme({})
 
 Repcl.ShowWindow("id")
@@ -546,7 +562,7 @@ The expression parser is exposed for power users who want to extend the chain la
 Repcl.Parser.DefineToken(symbol, config)
 Repcl.Parser.DefineResolver(name, fn)
 
-local ast = Repcl.Parser.Parse("/kick PlayerTwo -s")
+local ast = Repcl.Parser.Parse("kick PlayerTwo -s")
 Repcl.Parser.Execute(ast, runFn)
 Repcl.Parser.Tokenize(raw)
 Repcl.Parser.ResolveStackRef(ref, stack)
@@ -613,7 +629,6 @@ Repcl.HideCLI()
 Repcl.ToggleCLI()
 Repcl.LockCLI()
 Repcl.UnlockCLI()
-Repcl.SetPrefix(char)
 Repcl.SetTheme(theme)
 
 Repcl.Window(id, fn)
