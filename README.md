@@ -1,5 +1,7 @@
 <div align="center">
 
+# Repcl
+
 <img src="https://img.shields.io/badge/Repcl-v0.1.0-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
 <img src="https://img.shields.io/badge/Roblox_Execution_and_Processing_Command_Library-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
 <img src="https://img.shields.io/badge/Plinko_Labs-Built_by-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
@@ -7,6 +9,8 @@
 <img src="https://img.shields.io/badge/Iris-WWI_&_Repl-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
 
 </div>
+
+---
 
 <br />
 
@@ -37,35 +41,7 @@ Repcl is a full-featured in-game command framework for Roblox. It handles comman
 
 ## Install
 
-Place `Repcl` (ModuleScript) under `ReplicatedStorage`. Place Iris under `ReplicatedStorage.deps.Iris`.
-
-```
-ReplicatedStorage
-├── Repcl        -- this library
-│   ├── Types
-│   ├── Hooks
-│   ├── Registry
-│   ├── TypeSystem
-│   ├── BuiltinTypes
-│   ├── AuthManager
-│   ├── Parser
-│   ├── Executor
-│   ├── Network
-│   ├── Interface
-│   ├── WindowManager
-│   ├── Repl
-│   ├── Builder
-│   ├── Builtins
-│   └── Repcl    -- entry (this is what you require)
-└── deps
-    └── Iris
-```
-
----
-
-## Quick start
-
-**Server** (`Script` in `ServerScriptService`):
+Place `Repcl` (ModuleScript) under `ReplicatedStorage`. 
 
 ```lua
 local Repcl = require(game.ReplicatedStorage.Repcl.Repcl)
