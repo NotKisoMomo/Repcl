@@ -47,7 +47,7 @@ Place `Repcl` (ModuleScript) under `ReplicatedStorage`.
 
 ## Getting Started 
 
-**Server** (`Script` in `ServerScriptService `):
+**Server** (`Script` in `ServerScriptService`):
 
 ```lua
 local Repcl = require(game.ReplicatedStorage.Repcl.Repcl)
