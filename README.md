@@ -4,13 +4,13 @@
 <img src="https://img.shields.io/badge/Roblox_Execution_and_Processing_Command_Library-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
 <img src="https://img.shields.io/badge/Plinko_Labs-Built_by-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
 <img src="https://img.shields.io/badge/Luau-strict-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
-<img src="https://img.shields.io/badge/Iris-UI-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
+<img src="https://img.shields.io/badge/Iris-WWI_&_Repl-6C3EF4?style=for-the-badge&labelColor=0d0d0f" />
 
 </div>
 
 <br />
 
-Repcl is a full-featured in-game command framework for Roblox. It handles command registration, typed argument parsing, server/client execution contexts, auth hooks, middleware, a chain expression language, and a built-in script editor called **Repl**. The entire UI is powered by [Iris](https://github.com/SirMallard/Iris).
+Repcl is a full-featured in-game command framework for Roblox. It handles command registration, typed argument parsing, server/client execution contexts, auth hooks, middleware, a chain expression language, and a built-in script editor called **Repl**. The main CLI terminal is a fully custom Roblox ScreenGui. WWI windows and the Repl editor are powered by [Iris](https://github.com/SirMallard/Iris).
 
 ---
 
